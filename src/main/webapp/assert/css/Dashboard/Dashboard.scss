@@ -1,0 +1,1277 @@
+/*
+ * 파일명 : dashboard.css
+ * 설 명 : 대쉬보드 화면
+ * 최초 생성일 : 
+ *     
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+#dashboard {
+  height: calc(100vh - 2rem - 85px);
+  width: calc(100vw - 3rem - 78px - 1px); 
+  
+  .head {
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: var(--font-medium);
+      margin-right: 2rem;
+      color: var(--color-section-icon);
+    }
+
+    h3 {
+      color: var(--color-section-title);
+    }
+  }
+
+  .body * {
+    background: none;
+  }
+
+  .body {
+    margin: 0 2rem;
+
+    height: 85%;
+
+    background: var(--color-white);
+    border-radius: var(--size-border-large-radius);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    table {
+      width: 90%;
+      border-spacing: 0px;
+      
+      .cards .card {
+        position: relative;
+        
+        // 아이템의 기본 크기 
+        .item {            
+          width: 11vw;
+          height: 13vh;
+        }
+      }
+
+      //-----------------------------------------------------------------
+      // 데이터 준비 - starts
+      //-----------------------------------------------------------------
+      .cards.first .card {  
+        .item {
+          height: 6vh;
+
+          .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: -60px;
+            left: -58px;
+
+            background: var(--color-border);
+            border-radius: 50%;
+
+            font-size: var(--font-regular);
+            font-weight: var(--weight-bold);
+            color: var(--color-major-title);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 1;
+                
+            &:hover {
+              transform: scale(1.1) rotate(-45deg);
+              transition: all var(--animation-middle-duration) ease;
+            }
+          }
+
+          .square {
+            position: absolute;
+            width: 25px;
+            height: .6rem;
+            line-height: .6rem;
+            top: -16px;  
+
+            background: var(--color-white);
+            color: var(--color-minor-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+
+          .title { 
+            position: absolute;
+            width: 160px;
+            height: 20px;
+            top: -45px;
+            left: -68px;
+
+            color: var(--color-sub-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+        }
+
+        // 데이터 탐험
+        &.four .item .content {          
+          position: absolute;
+          width: 150px;
+          height: 70px;
+          top: -15px;
+          left: 11px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;      
+          gap: 5px;
+          
+          a {
+            border-left: .25rem solid var(--color-border);
+            padding-left: .5rem;
+
+            font-size: var(--font-micro);
+            font-weight: var(--weight-medium);
+            color: var(--color-sub-title);
+          }
+        }
+      }
+      //-----------------------------------------------------------------
+      // 데이터 준비 - ends
+      //-----------------------------------------------------------------
+
+      //-----------------------------------------------------------------
+      // 시계열 준비 - starts
+      //-----------------------------------------------------------------
+      .cards.second .card {
+        .item {
+          height: 9vh;
+          
+          .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 33px;
+            left: -58px;
+
+            background: var(--color-border);
+            border-radius: 50%;
+
+            font-size: var(--font-regular);
+            font-weight: var(--weight-bold);
+            color: var(--color-major-title);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 1;
+
+            &:hover {
+              transform: scale(1.1) rotate(45deg);
+              transition: all var(--animation-middle-duration) ease;
+            }
+          }
+        }
+
+        //-----------------------------------------------------------------
+        // 시계열 데이터 분해 - starts
+        //-----------------------------------------------------------------
+        &.two .item {
+          .square {
+            position: absolute;
+            width: 25px;
+            height: .6rem;
+            line-height: .6rem;
+            top: 100%;
+            left: -40%;
+
+            background: var(--color-white);
+            color: var(--color-minor-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+
+          .title {
+            position: absolute;
+            width: 160px;
+            height: 90px;
+            top: 55px;
+            left: -74%;
+
+            color: var(--color-sub-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+
+          .content {
+            position: absolute;
+            width: 130px;
+            height: 70px;
+            top: 110px;
+            left: -75px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 5px;
+
+            a {
+              border-left: .25rem solid var(--color-border);
+              padding-left: .5rem;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+            }
+          }
+        }
+        //-----------------------------------------------------------------
+        // 시계열 데이터 분해 - ends
+        //-----------------------------------------------------------------
+          
+        //-----------------------------------------------------------------
+        // 시계열 정상성 검사 및 변환 - starts
+        //-----------------------------------------------------------------
+        &.three .item {
+          .square {
+            position: absolute;
+            width: 25px;
+            height: .6rem;
+            line-height: .6rem;
+            top: 83px;
+            left: -75px;
+
+            background: var(--color-white);
+            color: var(--color-minor-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+
+          >.title {
+            position: absolute;
+            width: 160px;
+            height: 20px;
+            top: 55px;
+            left: -150px;
+
+            color: var(--color-sub-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+
+          .content {
+            color: var(--color-minor-title);
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+
+            .first {              
+              .title {
+                position: absolute;
+                top: 110px;
+                left: -65px;
+
+                border-left: .25rem solid var(--color-border);
+                padding-left: .5rem;
+              }
+
+              .desc {
+                position: absolute;
+                top: 135px;
+                left: -50px;
+
+                display: flex;
+                flex-direction: column;
+
+                a {
+                  font-size: 1px;
+                  font-weight: var(--weight-medium);
+                  color: var(--color-sub-title); 
+                }
+              }
+            }
+
+            .second {
+              .title {
+                position: absolute;
+                top: 190px;
+                left: -65px;
+
+                border-left: .25rem solid var(--color-border);
+                padding-left: .5rem;
+              }
+
+              .desc {
+                position: absolute;
+                top: 215px;
+                left: -50px;
+
+                display: flex;
+                flex-direction: column;
+
+                a {
+                  font-size: 1px;
+                  font-weight: var(--weight-medium);
+                  color: var(--color-sub-title);
+                }
+              }
+            }
+          }
+        }
+        //-----------------------------------------------------------------
+        // 시계열 정상성 검사 및 변환 - ends
+        //-----------------------------------------------------------------
+
+        //-----------------------------------------------------------------
+        // 시계열 예측 - starts
+        //-----------------------------------------------------------------
+        &.four .item {
+          div:nth-child(1) {
+            width: 100px;
+            height: 100px;            
+            top: -25px;
+            left: -92px;
+
+            background: var(--color-border);
+            border-radius: 50%;
+
+            font-size: var(--font-regular);
+            font-weight: var(--weight-bold);
+            color: var(--color-major-title);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            z-index: 1;
+
+            &:hover {
+              transform: scale(1.1) rotate(-45deg);
+              transition: all var(--animation-middle-duration) ease;
+            }
+          }
+        
+          //-----------------------------------------------------------------
+          // 단변수 예측 - starts
+          //-----------------------------------------------------------------
+          div:nth-child(2) {
+            position: absolute;
+            width: 25px;
+            height: .6rem;
+            line-height: .6rem;
+            top: -17px;
+            left: 38px;
+
+            background: var(--color-white);
+            color: var(--color-minor-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+          
+          div:nth-child(3) {
+            position: absolute;
+            width: 110px;
+            height: 75px;
+            top: -40px;
+            left: -10px;
+
+            color: var(--color-sub-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+          
+          div:nth-child(4) {
+            // 단변수 예측 - Navie Mean (Yesterday, Value)
+            a:nth-child(1) {
+              position: absolute;
+              top: -53px;
+              left: 100px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 33px;
+                left: 40px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+
+            // 단변수 예측 - SES
+            a:nth-child(2) {
+              position: absolute;
+              top: -36px;
+              left: 220px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 4px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+
+            // 단변수 예측 - HWES
+            a:nth-child(3) {
+              position: absolute;
+              top: -36px;
+              left: 280px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 8px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+
+            // 단변수 예측 - AR
+            a:nth-child(4) {
+              position: absolute;
+              top: -36px;
+              left: 350px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 2px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+
+            // 단변수 예측 - MA
+            a:nth-child(5) {
+              position: absolute;
+              top: -36px;
+              left: 420px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 2px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+
+            // 단변수 예측 - ARMA
+            a:nth-child(6) {
+              position: absolute;
+              top: -36px;
+              left: 490px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 10px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+
+            // 단변수 예측 - ARIMA
+            a:nth-child(7) {
+              position: absolute;
+              top: -36px;
+              left: 560px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              // 점
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 12px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+
+            // 단변수 예측 - Auto ARIMA
+            a:nth-child(8) {
+              position: absolute;
+              top: -36px;
+              left: 630px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 20px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }            
+
+            // 단변수 예측 - Seasonal ARIMA
+            a:nth-child(9) {
+              position: absolute;
+              top: -36px;
+              left: 710px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 40px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+
+            // 단변수 예측 - Auto SARIA
+            a:nth-child(10) {
+              position: absolute;
+              top: -36px;
+              left: 810px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 22px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+
+            // 단변수 예측 - Prophet
+            a:nth-child(11) {
+              position: absolute;
+              top: -36px;
+              left: 900px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 15px;
+                left: 14px;
+                background: var(--color-side-icon);
+                border-radius: 50%;
+              }
+            }
+          }
+          //-----------------------------------------------------------------
+          // 단변수 예측 - ends
+          //-----------------------------------------------------------------
+
+          //-----------------------------------------------------------------
+          // 다변수 예측 - starts
+          //-----------------------------------------------------------------
+          
+          div:nth-child(5) {
+            top: 60px;
+            left: 48px;
+
+            position: absolute;
+            width: 25px;
+            height: .6rem;
+            line-height: .6rem;
+            top: 54px;
+            left: 38px;
+
+            background: var(--color-white);
+            color: var(--color-minor-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+
+          div:nth-child(6) {
+            position: absolute;
+            width: 110px;
+            height: 75px;
+            top: 30px;
+            left: -10px;
+
+            color: var(--color-sub-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+
+          // 다변수 예측 - Linear Models
+          div:nth-child(7) {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            top: 70px;
+            left: 142px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            a {
+              border-left: .25rem solid var(--color-border);
+              padding-left: .5rem;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+            }
+
+            // 점
+            &::before {
+              content: "";
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              top: -11px;
+              left: -3px;
+              background: var(--color-side-icon);
+              border-radius: 50%;
+            }
+
+            // 타이틀
+            &::after {
+              content: "Linear Models";
+              position: absolute;
+              width: 100px;
+              height: 10px;
+              top: -36px;
+              left: -43px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+            }
+          }
+
+          // 다변수 예측 - Tree Model
+          div:nth-child(8) {
+            position: absolute;
+            width: 205px;
+            height: 145px;
+            top: 70px;
+            left: 300px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            a {
+              border-left: .25rem solid var(--color-border);
+              padding-left: .5rem;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+            }
+
+            // 점
+            &::before {
+              content: "";
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              top: -11px;
+              left: -3px;
+              background: var(--color-side-icon);
+              border-radius: 50%;
+            }
+
+            // title
+            &::after {
+              content: "Tree Model";
+              position: absolute;
+              width: 100px;
+              height: 10px;
+              top: -36px;
+              left: -43px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+            }
+          }
+
+          // 다변수 예측 - Deep Learning
+          div:nth-child(9) {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            top: 70px;
+            left: 480px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            a {
+              border-left: .25rem solid var(--color-border);
+              padding-left: .5rem;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+            }
+
+            // 점
+            &::before {
+              content: "";
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              top: -12px;
+              left: -3px;
+              background: var(--color-side-icon);
+              border-radius: 50%;
+            }
+
+            // title
+            &::after {
+              content: "Deep Learning";
+              position: absolute;
+              width: 100px;
+              height: 10px;
+              top: -36px;
+              left: -43px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+            }
+          }
+
+          // 다변수 예측, Hyperparameter Optimization
+          div:nth-child(10) {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            top: 70px;
+            left: 650px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            a {
+              border-left: .25rem solid var(--color-border);
+              padding-left: .5rem;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+            }
+
+            // 점
+            &::before {
+              content: "";
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              top: -11px;
+              left: -3px;
+              background: var(--color-side-icon);
+              border-radius: 50%;
+            }
+
+            // title
+            &::after {
+              content: "Hyperparameter Optimization";
+              position: absolute;
+              width: 200px;
+              height: 10px;
+              top: -36px;
+              left: -105px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+            }
+          }
+          
+          // 다변수 예측 - Ensenbling
+          div:nth-child(11) {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            top: 70px;
+            left: 805px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            a {
+              border-left: .25rem solid var(--color-border);
+              padding-left: .5rem;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+            }
+
+            // 점
+            &::before {
+              content: "";
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              top: -11px;
+              left: -3px;
+              background: var(--color-side-icon);
+              border-radius: 50%;
+            }
+
+            // title
+            &::after {
+              content: "Ensenbling";
+              position: absolute;
+              width: 100px;
+              height: 10px;
+              top: -36px;
+              left: -43px;
+
+              font-size: var(--font-micro);
+              font-weight: var(--weight-medium);
+              color: var(--color-sub-title);
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .cards.third .card {
+        &.one {
+          border-top: none;
+          top: -2px;
+        }
+        
+        &.seven .item {
+          height: 175px;
+        }
+
+        &.four,
+        &.five,
+        &.six,
+        &.seven {
+          border-top: none;
+        }
+      }
+
+      .cards.fourth .card {
+        .item {
+          width: 90px;
+          height: 110px;
+
+          .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 83px;
+            left: -58px;
+
+            background: var(--color-border);
+            border-radius: 50%;
+
+            font-size: var(--font-regular);
+            font-weight: var(--weight-bold);
+            color: var(--color-major-title);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 1;
+
+            &:hover {
+              transform: scale(1.1) rotate(-45deg);
+              transition: all var(--animation-middle-duration) ease;
+            }
+          }
+
+          // 수치매트릭 - 번호
+          div:nth-child(2) {
+            position: absolute;
+            width: 25px;
+            height: .6rem;
+            line-height: .6rem;
+            top: 64px;
+            left: 140px;
+
+            background: var(--color-white);
+            color: var(--color-minor-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+            
+            z-index: 1;
+          }
+
+          // 수치매트릭 - 타이틀
+          div:nth-child(3) {
+            position: absolute;
+            width: 160px;
+            height: 20px;
+            top: 38px;
+            left: 72px;
+
+            color: var(--color-sub-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+
+          // 차트 - 번호
+          div:nth-child(4) {
+            position: absolute;
+            width: 25px;
+            height: .6rem;
+            line-height: .6rem;
+            top: 186px;
+            left: 140px;
+
+            background: var(--color-white);
+            color: var(--color-minor-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+
+            z-index: 1;
+          }
+
+          // 차트 - 타이틀
+          div:nth-child(5) {
+            position: absolute;
+            width: 160px;
+            height: 20px;
+            top: 205px;
+            left: 72px;
+
+            color: var(--color-sub-title);
+
+            font-size: var(--font-small);
+            font-weight: var(--weight-semi-bold);
+            text-align: center;
+          }
+
+          // 수치 메트릭
+          div:nth-child(6) {
+            a {
+              position: absolute;
+              width: 1350px;
+              height: 100px;
+              left: 95%;
+              top: 25px;
+
+              border: 1rem solid var(--color-border);
+              border-radius: var(--size-border-medium-radius);
+
+              color: var(--color-minor-title);
+
+              font-size: var(--font-small);
+              font-weight: var(--weight-semi-bold);
+              text-align: center;
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+
+          // 차트
+          div:nth-child(7) {
+            a {
+              position: absolute;
+              width: 300px;
+              height: 100px;
+              top: 140px;
+
+              border: 1rem solid var(--color-border);              
+              border-radius: var(--size-border-medium-radius);
+
+              color: var(--color-minor-title);
+
+              font-size: var(--font-small);
+              font-weight: var(--weight-semi-bold);
+              text-align: center;
+
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            a:nth-child(1) {
+              left: 95%;
+            }
+
+            a:nth-child(2) {
+              left: 258%;
+            }
+
+            a:nth-child(3) {
+              left: 420%;
+            }
+
+            a:nth-child(4) {
+              left: 577%;
+            }
+          } 
+        }
+      }
+
+      //---------------------------------------------------------------------------------------------------
+      // line - starts
+      //---------------------------------------------------------------------------------------------------
+      .cards {        
+        &.first .card {
+          top: -30px;
+          left: 20px;
+          border-top: 1rem solid var(--color-border);
+
+          &.three,
+          &.four,
+          &.five,
+          &.six,
+          &.seven {
+            border-bottom: 1rem solid var(--color-border);
+          }
+
+          &.seven {
+            border-right: 1rem solid var(--color-border);
+            border-radius: 0 20px 20px 0;
+          }
+        } 
+
+        &.second .card {
+          top: -45px;
+          border-top: 1rem solid var(--color-border);
+          
+          &.one {
+            border-left: 1rem solid var(--color-border);
+            border-bottom: 1rem solid var(--color-border);
+            border-radius: 20px 0 0 20px;
+          }
+
+          &.two {
+            border-bottom: 1rem solid var(--color-border);
+          }
+
+          &.three {
+            border-bottom: 1rem solid var(--color-border);
+            top: -45px;
+            left: -77px;
+          }
+        
+          &.four {
+            border-top: none;                        
+                        
+            // 시계열 예측 : 가장 큰 네모 상자
+            .item {
+              position: absolute;
+              width: 1000px;
+              left: -100px;
+              height: 80px;
+              top:65px;
+
+              border: 1rem solid var(--color-border);
+              border-radius: 50px 20px 0 50px;
+            }
+          }
+        }
+
+        &.third .card {
+          &.one, &.four, &.five, &.six, &.seven {
+            border-top: none;
+          }
+
+          &.seven {
+            border-right: 1rem solid var(--color-border);
+            border-radius: 0 0 20px 0;
+            top: -34px;
+            left: 13px;
+          }
+        }
+
+        &.fourth .card {
+          border-top: 1rem solid var(--color-border);
+          top: -51px;
+
+          &.one {
+            border-left: 1rem solid var(--color-border);
+            border-radius: 20px 0 0 20px;
+
+            .item div:nth-child(2)::before {
+              content: "";
+              position: absolute;
+              width: 51px;
+              height: 1rem;
+              top: 62px;
+              left: -99px;
+              background: var(--color-border);
+            }
+
+            .item div:nth-child(4)::after {
+              content: "";
+              position: absolute;
+              width: 1rem;
+              height: 103px;
+              top: -107px;
+              left: -48px;
+              background: var(--color-border);
+            }
+
+            .item div:nth-child(6)::before {
+              content: "";
+              position: absolute;
+              width: 116px;
+              height: 1rem;
+              top: 64px;
+              left: 92px;
+              background: var(--color-border);
+              border-radius: var(--size-border-large-radius) 0 0 0;
+            }
+
+            .item div:nth-child(7) {
+              &::before {
+                content: "";
+                position: absolute;
+                width: 116px;
+                height: 1rem;
+                top: 180px;
+                left: 92px;
+                background: var(--color-border);
+                border-radius: 0 0 0 var(--size-border-large-radius);
+              }
+
+              a:nth-child(1)::after,
+              a:nth-child(2)::after,
+              a:nth-child(3)::after {
+                content: "";
+                position: absolute;
+                width: 56px;
+                height: 1rem;
+                top: 24px;
+                left: 284px;
+                background: var(--color-border);
+              }
+            }
+          }
+        }
+      }
+      //---------------------------------------------------------------------------------------------------
+      // line - ends
+      //---------------------------------------------------------------------------------------------------
+      
+    }//End of .body table
+
+  }//End of .body
+
+}// End Of #dashboard

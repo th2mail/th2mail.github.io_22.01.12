@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/**
+ * 파일명 : LoadingPreview.css
+ * 설 명 : 센서 데이터 로딩 & 프리뷰
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+#loading-preview {
+  height: calc(100vh - 2rem - 85px);
+  width: calc(100vw - 3rem - 78px - 1px);
+}
+
+#loading-preview .head {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: var(--font-regular);
+}
+
+#loading-preview .head i {
+  font-size: 1.4rem;
+  margin-right: 2rem;
+  color: #c3cad9;
+}
+
+#loading-preview .head h3 {
+  color: #627293;
+}
+
+#loading-preview .body * {
+  background: none;
+}
+
+#loading-preview .body {
+  margin: 0 2rem;
+  height: 85%;
+  background: var(--color-white);
+  border-radius: var(--size-border-large-radius);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=LoadingPreview.css.map */

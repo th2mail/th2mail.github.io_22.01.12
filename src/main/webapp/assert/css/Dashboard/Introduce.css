@@ -1,0 +1,661 @@
+@charset "UTF-8";
+/**
+ * 파일명 : Introduce.scss
+ * 설 명 : TimeSeries Sensor Data Forecasting UI 소개 화면
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+#introduce {
+  height: calc(100vh - 2rem - 85px);
+  width: calc(100vw - 3rem - 78px - 1px);
+}
+
+#introduce .head {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: var(--font-regular);
+}
+
+#introduce .head i {
+  font-size: 1.4rem;
+  margin-right: 2rem;
+  color: #c3cad9;
+}
+
+#introduce .head h3 {
+  color: #627293;
+}
+
+#introduce .body {
+  margin: 0 2rem;
+  height: 85%;
+  border-radius: var(--size-border-large-radius);
+}
+
+#introduce .body * {
+  background: none;
+}
+
+#introduce .body .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  position: relative;
+}
+
+#introduce .body .cards .card {
+  background: var(--color-white);
+  border-radius: 30px;
+  height: 37vh;
+  padding: 1rem;
+  position: relative;
+}
+
+#introduce .body .cards .card .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  color: var(--color-white);
+  background: #a9a9a9;
+  font-weight: bolder;
+}
+
+#introduce .body .cards .card .order:hover ~ .detail {
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+  background: rgba(247, 248, 250, 0.9);
+}
+
+#introduce .body .cards .card .title {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: oblique;
+  letter-spacing: 15px;
+  word-spacing: 5px;
+  color: var(--color-title);
+}
+
+#introduce .body .cards .card .desc {
+  margin: 2rem 1rem 1rem .1rem;
+  text-align: center;
+  text-align: justify;
+  font-size: 20px;
+  color: var(--color-desc);
+}
+
+#introduce .body .cards .card .item {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 25px;
+  left: 280px;
+}
+
+#introduce .body .cards .card .item .content {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-weight: var(--weight-bold);
+  font-style: oblique;
+  text-align: center;
+  border-radius: 50%;
+  background: #a9a9a93f;
+  color: var(--color-icon);
+  margin-right: 7rem;
+}
+
+#introduce .body .cards .card .item .content i {
+  font-size: 45px;
+}
+
+#introduce .body .cards .card .detail {
+  position: fixed;
+  left: 51.8%;
+  top: 58.5%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1600px;
+  height: 660px;
+  border-radius: 30px;
+  background: #f7f8fa;
+  opacity: 0;
+  pointer-events: none;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+#introduce .body .cards .card .detail:hover {
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+  background: rgba(247, 248, 250, 0.9);
+}
+
+#introduce .body .cards .card .detail h1 {
+  margin-bottom: 2rem;
+}
+
+#introduce .body .cards .card .detail table {
+  border-spacing: 0px;
+  margin: 0 auto;
+}
+
+#introduce .body .cards .card .detail table .num {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #a9a9a9;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  left: 60px;
+  top: -100px;
+}
+
+#introduce .body .cards .card .detail table .num.one {
+  left: -38px;
+}
+
+#introduce .body .cards .card .detail table .num.six {
+  left: 62px;
+}
+
+#introduce .body .cards .card .detail table .num.three {
+  left: -38px;
+  top: -42px;
+}
+
+#introduce .body .cards .card .detail table .num.four {
+  top: -42px;
+}
+
+#introduce .body .cards .card .detail table .num.two {
+  top: -55px;
+  left: -19px;
+}
+
+#introduce .body .cards .card .detail table .num.five {
+  top: -55px;
+  left: 42px;
+}
+
+#introduce .body .cards .card .detail table .name {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background: #a9a9a93f;
+  color: var(--color-icon);
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: -105px;
+  left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#introduce .body .cards .card .detail table .name.one {
+  left: -50px;
+}
+
+#introduce .body .cards .card .detail table .name.six {
+  left: 50px;
+}
+
+#introduce .body .cards .card .detail table .name.three {
+  top: -50px;
+  left: -50px;
+}
+
+#introduce .body .cards .card .detail table .name.four {
+  top: -50px;
+  left: 50px;
+}
+
+#introduce .body .cards .card .detail table .name.two {
+  top: -60px;
+  left: -30px;
+}
+
+#introduce .body .cards .card .detail table .name.five {
+  top: -60px;
+  left: 30px;
+}
+
+#introduce .body .cards .card .detail table tr td {
+  position: relative;
+}
+
+#introduce .body .cards .card .detail table tr td:nth-child(odd) {
+  width: 200px;
+}
+
+#introduce .body .cards .card .detail table tr td:nth-child(even) {
+  width: 50px;
+}
+
+#introduce .body .cards .card .detail table tr:nth-child(odd) {
+  height: 80px;
+}
+
+#introduce .body .cards .card .detail table tr:nth-child(even) {
+  height: 30px;
+}
+
+#introduce .body .cards .card .detail table .arrow {
+  position: absolute;
+  font-size: 80px;
+  color: gray;
+  top: -90px;
+  left: -40px;
+}
+
+#introduce .body .cards .card .detail table .arrow.one-to-two {
+  left: -80px;
+  top: -100px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+#introduce .body .cards .card .detail table .arrow.two-to-three {
+  top: -70px;
+  left: -90px;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+#introduce .body .cards .card .detail table .arrow.three-to-four {
+  top: -30px;
+}
+
+#introduce .body .cards .card .detail table .arrow.four-to-five {
+  left: 0px;
+  top: -70px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+#introduce .body .cards .card .detail table .arrow.five-to-six {
+  top: -110px;
+  left: 0px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+#introduce .body .cards .card .detail table .desc.one {
+  background: gray;
+  color: white;
+  border-radius: .4em;
+  width: 400px;
+  height: 150px;
+  position: absolute;
+  top: -60px;
+  left: -240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-style: oblique;
+}
+
+#introduce .body .cards .card .detail table .desc.one:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0px;
+  height: 0;
+  border: 30px solid transparent;
+  border-left-color: gray;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: 20px;
+  margin-right: -30px;
+}
+
+#introduce .body .cards .card:nth-child(1) .order {
+  top: -4px;
+  left: -4px;
+  border-radius: 50px 0 200px 0;
+}
+
+#introduce .body .cards .card:nth-child(1) .order .alpha {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
+#introduce .body .cards .card:nth-child(1) .order:hover {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  width: 120px;
+  height: 120px;
+  background: #bdbebd;
+}
+
+#introduce .body .cards .card:nth-child(1) .order:hover .alpha {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-size: 50px;
+}
+
+#introduce .body .cards .card:nth-child(2) .order {
+  top: -2px;
+  left: 755px;
+  border-radius: 0 50px 0 200px;
+}
+
+#introduce .body .cards .card:nth-child(2) .order .alpha {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+}
+
+#introduce .body .cards .card:nth-child(2) .order:hover {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  left: 735px;
+  width: 120px;
+  height: 120px;
+  background: #bdbebd;
+}
+
+#introduce .body .cards .card:nth-child(2) .order:hover .alpha {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-size: 50px;
+}
+
+#introduce .body .cards .card:nth-child(3) .order {
+  top: 246px;
+  left: -0px;
+  border-radius: 0 200px 0 50px;
+}
+
+#introduce .body .cards .card:nth-child(3) .order .alpha {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+#introduce .body .cards .card:nth-child(3) .order:hover {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  top: 226px;
+  width: 120px;
+  height: 120px;
+  background: #bdbebd;
+}
+
+#introduce .body .cards .card:nth-child(3) .order:hover .alpha {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-size: 50px;
+}
+
+#introduce .body .cards .card:nth-child(3) .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+}
+
+#introduce .body .cards .card:nth-child(3) .content:nth-child(1)::before {
+  content: "다변수 예측";
+}
+
+#introduce .body .cards .card:nth-child(3) .content:nth-child(2)::before {
+  content: "단변수 예측";
+}
+
+#introduce .body .cards .card:nth-child(3) .content:nth-child(1), #introduce .body .cards .card:nth-child(3) .content:nth-child(2) {
+  margin-right: 8.5rem;
+}
+
+#introduce .body .cards .card:nth-child(3) .content:nth-child(1)::before, #introduce .body .cards .card:nth-child(3) .content:nth-child(2)::before {
+  width: 110px;
+  position: absolute;
+  left: 40px;
+  top: -70px;
+  opacity: 0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#introduce .body .cards .card:nth-child(3) .content:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#introduce .body .cards .card:nth-child(3) .content:hover i {
+  font-size: 3rem;
+  color: white;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#introduce .body .cards .card:nth-child(3) .content:hover:nth-child(1)::before, #introduce .body .cards .card:nth-child(3) .content:hover:nth-child(2)::before {
+  top: -30px;
+  opacity: 1;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#introduce .body .cards .card:nth-child(4) .order {
+  top: 246px;
+  left: 755px;
+  border-radius: 200px 0 50px 0;
+}
+
+#introduce .body .cards .card:nth-child(4) .order .alpha {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+#introduce .body .cards .card:nth-child(4) .order:hover {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  top: 226px;
+  left: 735px;
+  width: 120px;
+  height: 120px;
+  background: #bdbebd;
+}
+
+#introduce .body .cards .card:nth-child(4) .order:hover .alpha {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-size: 50px;
+}
+
+#introduce .body .cards .card:nth-child(4) .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+}
+
+#introduce .body .cards .card:nth-child(4) .content:nth-child(1)::before {
+  content: "수치매트릭";
+  left: 40px;
+}
+
+#introduce .body .cards .card:nth-child(4) .content:nth-child(2)::before {
+  content: "차트";
+  left: 15px;
+}
+
+#introduce .body .cards .card:nth-child(4) .content:nth-child(1)::before, #introduce .body .cards .card:nth-child(4) .content:nth-child(2)::before {
+  width: 100px;
+  position: absolute;
+  top: -70px;
+  opacity: 0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#introduce .body .cards .card:nth-child(4) .content:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#introduce .body .cards .card:nth-child(4) .content:hover i {
+  font-size: 2.5rem;
+  color: white;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#introduce .body .cards .card:nth-child(4) .content:hover:nth-child(1)::before, #introduce .body .cards .card:nth-child(4) .content:hover:nth-child(2)::before {
+  top: -30px;
+  opacity: 1;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+#introduce .body .cards .circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border: 10px solid #19a4a4;
+  border-radius: 50%;
+  background: white;
+}
+
+#introduce .body .cards .circle .company {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+}
+
+#introduce .body .cards .circle .company .korean {
+  color: #3e5175;
+  font-size: 15px;
+  font-style: oblique;
+  font-weight: var(--weight-bold);
+  position: absolute;
+  top: 40px;
+  left: 127px;
+  width: 80px;
+}
+
+#introduce .body .cards .circle .company .english {
+  color: #19a4a4;
+  font-size: 80px;
+  position: absolute;
+  top: 25px;
+  left: 13px;
+}
+
+#introduce .body .cards .circle .company .address {
+  color: #19a4a4;
+  font-size: 1.3rem;
+  font-style: oblique;
+  position: absolute;
+  top: 120px;
+  left: 30px;
+}
+
+#introduce .body .cards .circle .squars {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+}
+
+#introduce .body .cards .circle .squars .square {
+  width: 115px;
+  height: 115px;
+  background: transparent;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(1):hover, #introduce .body .cards .circle .squars .square:nth-child(2):hover, #introduce .body .cards .circle .squars .square:nth-child(3):hover, #introduce .body .cards .circle .squars .square:nth-child(4):hover {
+  background: rgba(25, 164, 164, 0.4);
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(1) {
+  border-radius: 200px 0 0 0;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(2) {
+  border-radius: 0 200px 0 0;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(3) {
+  border-radius: 0 0 0 200px;
+}
+
+#introduce .body .cards .circle .squars .square:nth-child(4) {
+  border-radius: 0 0 200px 0;
+}
+/*# sourceMappingURL=Introduce.css.map */

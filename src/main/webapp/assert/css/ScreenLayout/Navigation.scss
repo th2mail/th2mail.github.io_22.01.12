@@ -1,0 +1,313 @@
+/**
+ * 파일명 : navigation.css
+ * 설 명 : 네비게이션
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+nav {  
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+
+  width: 78px;
+
+  border-top-left-radius : var(--size-border-large-radius);
+  border-bottom-left-radius: var(--size-border-large-radius);
+  // border-right: 3px solid var(--color-border);
+  border-right: 3px solid rgba(34,34,34,.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 98;
+
+  ul.nav_list {
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+
+    li {
+      width: 100%;
+      height: 6.2%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      a {
+        position: relative;
+      }
+
+      a, 
+      a > span {
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        text-align: center;
+
+        background: none;
+        // color: var(--color-side-icon);
+        color: rgba(34, 34, 34, .8);
+        font-weight: 400;
+
+        font-style: oblique;
+
+        border-radius: var(--size-border-medium-radius);
+
+        transition: .2s linear;
+
+        .tooltip {
+          position: absolute;
+          height: 3rem;
+          line-height: 3rem;
+          left: 2.5rem;
+          top: -1rem;
+          text-align: left;
+
+          border-radius: 0 var(--size-border-medium-radius) var(--size-border-medium-radius) 0;
+
+          background: var(--color-white);
+          color: var(--color-hover-icon);
+
+          font-weight: 700;          
+          white-space: nowrap;
+
+          opacity: 0;
+          pointer-events: none;   
+        }
+      }
+
+      // Introduce 툴팁
+      &:nth-child(1) a .tooltip {
+        left: 1.7rem;
+      }
+
+      // 대쉬보드 툴팁
+      &:nth-child(2) a .tooltip {
+        left: 1.9rem;
+        font-style: oblique;
+      }
+
+      &:hover a,
+      &:hover a > span:nth-child(1) {
+        background: var(--color-white);
+        color: var(--color-hover-icon);
+        font-weight: var(--weight-bold);
+      }      
+
+      &:hover .tooltip {
+        opacity: 1;
+        top: 0rem;
+        pointer-events: auto;
+      }
+
+      // 사이드바 메뉴리스트의 툴팁 가로 사이즈 
+      &:nth-child(1) .tooltip {
+        width: 85px;
+      }
+      &:nth-child(2) .tooltip,
+      &:nth-child(14) .tooltip,
+      &:nth-child(15) .tooltip {
+        width: 90px;
+      }
+      &:nth-child(11) .tooltip {
+        width: 110px;
+      }
+      &:nth-child(8) .tooltip {
+        width: 125px;
+      }
+      &:nth-child(3) .tooltip,
+      &:nth-child(4) .tooltip,
+      &:nth-child(16) .tooltip {
+        width: 130px;
+      }
+      &:nth-child(12) .tooltip {
+        width: 145px;
+      }
+      &:nth-child(7) .tooltip {
+        width: 160px;
+      }
+      &:nth-child(9) .tooltip,
+      &:nth-child(10) .tooltip {
+        width: 165px;
+      }
+      &:nth-child(6) .tooltip {
+        width: 185px;
+      }
+      &:nth-child(13) .tooltip {
+        width: 200px;
+      }
+      &:nth-child(5) .tooltip {
+        width: 235px;
+      }    
+    } // end of li
+
+  } // end of ul.nav_list
+
+} // end of nav
+
+/* ******************************************************************************************** 
+
+      .logo_content
+
+******************************************************************************************** */
+
+// nav .logo_content .logo {
+//   color: #fff;  
+//   width: 100%;
+//   height: 50px;
+//   line-height: 50px;
+//   text-align: center;  
+// }
+
+// .logo_content .logo i {
+//   font-size: 3rem;
+// }
+
+/* ******************************************************************************************** 
+
+      .nav_list
+
+******************************************************************************************** */
+
+
+
+
+
+
+
+
+
+
+
+// nav ul li a {
+//   // color: rgb(129, 132, 135);
+//   font-weight: bold;
+//   display: flex;
+//   justify-content: center;
+//   transition: all 0.4s ease;
+//   border-radius: 12px;  
+// }
+
+
+
+// nav ul li.active,
+// nav ul li.active a {
+//   background: rgb(41, 48, 57);
+//   width: 78px;
+  
+// }
+
+// nav ul li.active a:hover {
+//   background: rgb(41, 48, 57);
+//   width: 78px;
+//   color: #fff;
+// }
+
+// nav ul li.active .tooltip {
+//   display: none;
+// }
+
+// nav ul li.open:hover .tooltip {
+//   display: none;
+// }
+
+// nav .rightbar {
+//   position: absolute;
+//   top: 0;
+//   left: -265px;
+//   height: 100%;
+//   width: 265px;
+//   padding: 1rem 1rem;
+//   background: pink;
+// }
+
+// nav .rightbar input.title {
+//   margin-top: 1.5rem;
+//   color: #FEC1A9;
+//   background: none;
+//   border: none;
+//   outline: none;
+//   font-size: 1.1rem;  
+//   text-align: center;
+//   width: 230px;
+// }
+
+// nav .rightbar.active {
+//   top: 0px;
+//   left: 78px;
+//   height: 100%;
+//   width: 265px; 
+//   background: rgb(41, 48, 57);
+// }
+
+// nav .rightbar.active .close {
+//   opacity: 1;
+// }
+
+// .rightbar .close {
+//   position: absolute;
+//   width: 30px;
+//   height: 30px;
+//   background: rgb(34, 36, 41);
+//   top: 50%;
+//   left: 255px;
+//   color: #fff;
+//   font-size: 1rem;
+//   font-weight: 900;
+//   border-radius: 10px;
+//   display: flex;
+//   justify-content: right;
+//   align-items: center;
+//   padding-right: 3px;
+//   opacity: 0;
+// }
+
+/* ******************************************************************************************** 
+
+      네비게이션 상세 화면
+
+******************************************************************************************** */
+
+// .rightbar .title-wrapper {
+//   margin-bottom: 5rem;
+// }
+
+// .rightbar .title-wrapper::after {
+//   content: "";
+//   position: absolute;  
+//   background-color: #FEC1A9;
+//   width: 265px;
+//   height: 1px;
+//   top: 100px;
+//   left: 0;
+// }
+
+// .rightbar .item {
+//   color: white;
+//   /* font-size: 1rem; */
+// }
+
+// .rightbar .item .title {
+//   font-size: var(--font-regular);
+//   margin: 1rem 0 5px 0;
+//   display: inline-block;
+//   border-bottom: 2px solid var(--color-white);
+// }
+
+// .rightbar .item .desc {
+//   font-size: var(--font-small);
+//   display: block;
+//   margin: 1rem 0;
+// }

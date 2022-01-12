@@ -1,0 +1,44 @@
+/**
+ * 파일명 : Header.css
+ * 설 명 : 헤더
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+header {
+  position: fixed;
+  top: 1rem; 
+  left: calc(1rem + 78px); 
+  right: 1rem;
+  height: 85px;
+
+  border-top-right-radius : var(--size-border-large-radius);
+  // border-bottom: 3px solid var(--color-border);
+  border-bottom: 3px solid rgba(34, 34, 34, .2);
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem;
+  
+  .account {
+    // font-size: var(--font-medium);
+    font-size: 2rem;
+    color: var(--color-header-icon);
+
+    > div {
+      margin-right: 1rem;
+      transition: var(--animation-middle-duration) ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.5);
+        color: var(--color-hover-icon);
+      }
+    }  
+  }
+}

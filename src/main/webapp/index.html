@@ -1,0 +1,106 @@
+<!-- 
+  파일명 : index.html
+  설 명 : Time Series Sensor Data Forecasting UI	
+	최초 생성일 : 21.09.29
+
+	수정일			수정내역      
+	---------		-----------------------------------------------------------------
+	
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Alian AI/BigData Solution UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- <script src="/lib/jquery-3.6.0.min.js"></script> -->
+  <script src="/src/main/webapp/assert/lib/jquery-3.6.0.min.js"></script>
+  <script src="/src/main/webapp/assert/js/main.js" defer></script>
+  <link rel="stylesheet" href="/src/main/webapp/assert/css/style.css">
+</head>
+
+<body>
+
+  <header></header>
+
+  <nav></nav>
+
+  <main>
+
+    <!-- #introduceEX -->
+    <section id="introduceEX"></section>
+
+    <!-- #introduce -->
+    <section id="introduce"></section>
+
+    <!-- #dashboard -->
+    <section id="dashboard"></section>
+
+    <!-- 센서 데이터 현황 -->
+    <section id="data-status"></section>
+
+    <!-- 센서 데이터 선택 -->
+    <section id="data-select"></section>
+
+    <!-- 시계열 데이터 탐험 - Pandas Profiler -->
+    <section id="explore-pandas-profiler"></section>
+
+    <!-- 시계열 데이터 탐험 - Sweetviz -->
+    <section id="explore-sweetviz"></section>
+
+    <!-- 센서 데이터 로딩 & 프리뷰 -->
+    <section id="loading-preview"></section>
+
+    <!-- 센서 데이터 상관관계 그래프 -->
+    <section id="correlate-graph"></section>
+
+    <!-- 결측치 시각화 및 처리 -->
+    <section id="visual-process-miss-value"></section>
+
+    <!-- 이상치 시각화 및 처리 -->
+    <section id="visual-process-out-value"></section>
+
+    <!-- 리셈플링 및 정규화 -->
+    <section id="resample-normalize"></section>
+
+    <!-- 시계열 데이터 분해 -->
+    <section id="decompose"></section>
+
+    <!-- 시계열 정상성 검사 및 변환 -->
+    <section id="sanity-check-Transform"></section>
+
+    <!-- 시계열 예측 with 단일 변수 -->
+    <section id="predict-single-variable"></section>
+
+    <!-- 시계열 예측 with 다중 변수 -->
+    <section id="predict-multi-variable"></section>
+
+    <!-- 시계열 예측 결과 분석 -->
+    <section id="predict-result-analysis"></section>
+
+  </main>
+
+  <form class="search-frm">
+    <label for="search-box" class="las la-search"></label>
+    <input type="search" id="search-box" placeholder="Search">
+    <i class="las la-arrow-right"></i>
+  </form>
+
+  <div class="dimmed"></div>
+
+  <form class="login-frm">
+    <div class="title">
+      <h2>ALIAN 로그인</h2>
+      <i class="las la-times"></i>
+    </div>
+    <div class="box">
+      <input type="text" placeholder="아이디를 입력해 주세요." />
+      <input type="password" placeholder="비밀번호를 입력해 주세요." />
+    </div>
+    <input type="submit" class="btn" value="Enter">
+  </form>
+
+</body>
+
+</html>
